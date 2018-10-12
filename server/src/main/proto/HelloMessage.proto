@@ -1,0 +1,12 @@
+syntax="proto3";
+
+message HelloRequest{
+    string message_send = 1;
+}
+
+message HelloResponse{
+    string message_receive = 2;
+}
+service HelloMessage{
+
+}
