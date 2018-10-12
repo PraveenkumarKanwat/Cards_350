@@ -11,7 +11,7 @@
  * 
  * 
  */
-package com.game.Cards350;
+package com.bugchod.cards;
 
 import java.util.ArrayList;
 

@@ -8,11 +8,11 @@
  * 
  * 
  */
-package com.game.Cards350;
+package com.bugchod.cards;
 
 public class Card {
 	public enum Suit{
-		Hearts(1), Diamonds(2), Spades(3), Clubs(4);
+		HEARTS(1), DIAMONDS(2), SPADES(3), CLUBS(4);
 		
 		  private int suitValue;
 
@@ -27,7 +27,7 @@ public class Card {
 	}
 	
 	public enum Rank {
-		Three(3), Four(4), five(5), Six(6), Seven(7), Eight(8), Nine(9), Ten(10), Jack(11), Queen(12), King(13), Ace(14);
+		THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7), EIGHT(8), NINE(9), TEN(10), JACK(11), QUEEN(12), KING(13), ACE(14);
 		  private int rankValue;
 
 		  Rank(int rankValue){

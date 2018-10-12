@@ -1,17 +1,28 @@
+/* code is complete
+ * 
+ * 
+ * 
+ * 
+ * 
+ *
+ * 
+ * 
+ */
 package com.bugchod.cards;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import com.bugchod.cards.Card.*;
+import com.bugchod.cards.Card.Suit;
+import com.bugchod.cards.Card.Rank;
 
 public class Deck {
 
-	private ArrayList<Card> deck = new ArrayList();
+	private ArrayList<Card> deck = new ArrayList<>();
 	
 	public Deck() {
-		  for (Card.Suit s : Card.Suit.values()) {
-		    for (Card.Rank r : Card.Rank.values()) {
+		  for (Suit s : Suit.values()) {
+		    for (Rank r : Rank.values()) {
 		      deck.add(new Card(s,r));
 		    }
 		  }
@@ -25,9 +36,13 @@ public class Deck {
 	public void showDeck() {
 		int i=0;
 			for(i=0; i<=47; i++) {
-				System.out.print(deck.get(i).getRank() + " of ");
-				System.out.println(deck.get(i).getSuit());
-			}
+				System.out.print(deck.get(i).getSuit());
+				System.out.println(deck.get(i).getRank());
+		}
+	}
+	
+	public Card getCard (int index) {
+		return deck.get(index);
 	}
 	
 	

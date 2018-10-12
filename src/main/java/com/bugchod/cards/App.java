@@ -8,7 +8,7 @@
  * 
  * 
  */
-package com.game.Cards350;
+package com.bugchod.cards;
 
 /**
  * Hello world!
