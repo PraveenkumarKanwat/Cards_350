@@ -1,4 +1,5 @@
 syntax="proto3";
+package com.bugchod.cards.service;
 
 message HelloRequest{
     string message_send = 1;
@@ -7,6 +8,7 @@ message HelloRequest{
 message HelloResponse{
     string message_receive = 2;
 }
-service HelloMessage{
 
+service HelloMessage{
+    rpc send(HelloRequest) returns (HelloResponse);
 }
