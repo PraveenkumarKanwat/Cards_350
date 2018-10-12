@@ -8,12 +8,13 @@
  * 
  * 
  */
-package com.game.Cards350;
+package com.bugchod.cards;
 
 import java.util.ArrayList;
 
-import com.game.Cards350.Card.Rank;
-import com.game.Cards350.Card.Suit;
+import com.bugchod.cards.Card.Suit;
+import com.bugchod.cards.Card.Rank;
+
 
 public class Hand {
 	
@@ -27,5 +28,9 @@ public class Hand {
 		for(i=0; i<8; i++) {
 			hand.add(new Card(s,r));
 		}
+	}
+	
+	public void addCard(Card card, int Index) {
+		hand.add(card);
 	}
 }
