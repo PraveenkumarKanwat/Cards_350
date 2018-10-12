@@ -28,4 +28,8 @@ public class Hand {
 			hand.add(new Card(s,r));
 		}
 	}
+	
+	public void addCard(Card card, int Index) {
+		hand.add(card);
+	}
 }

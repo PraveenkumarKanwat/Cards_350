@@ -17,19 +17,28 @@ import java.util.ArrayList;
 
 public class Deal {
 
-	private int i,j,k;
-	private Hand hand;
+	private int i,j,k=0;
 	private Card card;
-	private ArrayList<Hand> handlist;
+	private ArrayList<Hand> handlist = new ArrayList<>();
+
+	private Hand hand = new Hand();
+
 	
-	
-	public Deal() {
-		for(i=0; i<6; i++) {
-			hand = handlist.get(i);
-			for(j=0; j<8; j++) {
-				card = deck.get(k);
-				hand.get(j) = card;
+	public Deal(Deck deck) {
+			for(i=0; i<6; i++) {
+					handlist.add(hand);
+					hand = handlist.get(i);
+					System.out.println("===========================================");			
+					System.out.println("hand number " + i);
+
+							for(j=0; j<8; j++) {
+								card = deck.getCard(k);
+								hand.addCard(card, j);
+									k++;
+									
+									System.out.print(card.getSuit());
+									System.out.println(card.getRank());
+				}
 			}
-		}
 	}
 }
