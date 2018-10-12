@@ -1,4 +1,4 @@
-# class Card:
+# class com.bugchod.cards.Card:
 #     def __init__(self, value, color):
 #         self.value = value
 #         self.color = color
