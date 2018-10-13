@@ -13,9 +13,8 @@ package com.bugchod.cards;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import com.bugchod.cards.Card.Suit;
 import com.bugchod.cards.Card.Rank;
-
+import com.bugchod.cards.Card.Suit;
 public class Deck {
 
 	private ArrayList<Card> deck = new ArrayList<>();
@@ -44,6 +43,6 @@ public class Deck {
 	public Card getCard (int index) {
 		return deck.get(index);
 	}
-	
-	
+
+
 }
