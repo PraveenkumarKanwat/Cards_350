@@ -1,0 +1,13 @@
+com/cards/game/Partner.class
+com/cards/basic/Dealer.class
+com/cards/game/Bidding.class
+com/cards/basic/Deck.class
+com/cards/basic/Suit.class
+com/cards/basic/Hand.class
+com/cards/tally/TallyTable.class
+com/cards/basic/Rank.class
+com/cards/game/Round.class
+com/cards/basic/Card.class
+com/cards/game/Trump.class
+com/cards/game/Match.class
+com/cards/game/Player.class
