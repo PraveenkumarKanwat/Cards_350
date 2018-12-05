@@ -1,0 +1,7 @@
+cards/game/TrumpTest.class
+cards/game/BiddingTest.class
+cards/basic/DeckTest.class
+cards/game/RoundTest.class
+cards/basic/RankTest.class
+cards/basic/CardTest.class
+cards/game/PartnerTest.class
