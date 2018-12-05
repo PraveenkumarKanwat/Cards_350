@@ -1,8 +1,5 @@
 package cards.basic;
 
-import com.cards.basic.Rank;
-import com.cards.basic.Suit;
-
 public class RankTest {
 
     public static void main(String[] args) {

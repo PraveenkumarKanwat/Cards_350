@@ -2,11 +2,9 @@ package cards.game;
 
 import java.util.Scanner;
 
-import com.cards.basic.Card;
-import com.cards.basic.Rank;
-import com.cards.basic.Suit;
-import com.cards.game.Round;
-import com.cards.game.Trump;
+import cards.basic.Card;
+import cards.basic.Rank;
+import cards.basic.Suit;
 
 public class RoundTest {
 

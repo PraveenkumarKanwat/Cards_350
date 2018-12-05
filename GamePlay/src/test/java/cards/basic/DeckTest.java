@@ -2,10 +2,6 @@ package cards.basic;
 
 import java.util.Scanner;
 
-import com.cards.basic.Card;
-import com.cards.basic.Rank;
-import com.cards.basic.Suit;
-
 public class DeckTest {
 
     public static void main(String[] args) {

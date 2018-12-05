@@ -1,7 +1,5 @@
 package cards.game;
 
-import com.cards.game.Trump;
-
 public class TrumpTest {
 
     public static void main(String[] args) {
