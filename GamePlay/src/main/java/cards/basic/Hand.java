@@ -30,6 +30,10 @@ public class Hand {
         return isSuccessful;
     }
 
+    public Boolean hasCard(Card card){
+        return myCard.contains(card);
+    }
+
     int getPoints(){
         return myPoints;
     }
