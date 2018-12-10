@@ -4,44 +4,50 @@ import java.util.ArrayList;
 
 
 public class Hand {
-    ArrayList<Card> myCard;
+
+    ArrayList<Card> myCards;
     int myPoints;
+
     public Hand() {
-        myCard = new ArrayList<Card>();
+        myCards = new ArrayList<Card>();
         myPoints = 0;
     }
 
-    void addCard(Card card){
-        myCard.add(card);
+    void addCard(Card card) {
+        myCards.add(card);
         calcPoints();
     }
 
-    void calcPoints(){
+    void calcPoints() {
         myPoints = 0;
-        int handSize = myCard.size();
-        for(int i =0; i < handSize; i++){
-            myPoints += myCard.get(i).getPoints();
+        int handSize = myCards.size();
+        for (int i = 0; i < handSize; i++) {
+            myPoints += myCards.get(i).getPoints();
         }
     }
 
-    Boolean removeCard(Card card){
-        boolean isSuccessful = myCard.remove(card);
+    Boolean removeCard(Card card) {
+        boolean isSuccessful = myCards.remove(card);
         calcPoints();
         return isSuccessful;
     }
 
-    public Boolean hasCard(Card card){
-        return myCard.contains(card);
+    public Boolean hasCard(Card card) {
+        return myCards.contains(card);
     }
 
-    int getPoints(){
+    public ArrayList<Card> getMyCards() {
+        return myCards;
+    }
+
+    int getPoints() {
         return myPoints;
     }
 
-    public void showHand(){
-        int handSize = myCard.size();
-        for(int i =0; i < handSize; i++){
-            System.out.println(myCard.get(i).getCardString() + "  ");
+    public void showHand() {
+        int handSize = myCards.size();
+        for (int i = 0; i < handSize; i++) {
+            System.out.println(myCards.get(i).getCardString() + "  ");
         }
     }
 }

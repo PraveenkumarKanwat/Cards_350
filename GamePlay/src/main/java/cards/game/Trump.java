@@ -13,7 +13,7 @@ public class Trump {
         isTrumpOpen = false;
     }
 
-    public Trump(Suit suit){
+    public Trump(Suit suit) {
         trumpSuit = suit;
         isTrumpOpen = false;
     }
@@ -26,17 +26,15 @@ public class Trump {
         return trumpSuit;
     }
 
-    public static void setTrump(){
-        while (true){
+    public static void setTrump() {
+        while (true) {
             System.out.print("Enter Your Suit {D,C,H,S}: ");
             String input = new Scanner(System.in).next();
             Suit suit = Suit.getSuitByString(input);
-            if(suit != null) {
+            if (suit != null) {
                 setTrumpSuit(suit);
                 break;
-            }
-
-            else {
+            } else {
                 System.out.print("Invalid Input Please try again. ");
             }
         }
@@ -47,7 +45,7 @@ public class Trump {
         return isTrumpOpen;
     }
 
-    public void openTrump(){
+    public void openTrump() {
         System.out.println("The Trump is : " + getTrump());
         isTrumpOpen = true;
     }

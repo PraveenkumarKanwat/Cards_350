@@ -22,7 +22,7 @@ public class Match {
         this.dealer = dealer;
     }
 
-    public void startTheGame(){
+    public void startTheGame() {
         /**
          * this should contain collection of players
          * then shuffle deck and distribute {check for 0 point player and then reshuffle}
@@ -34,10 +34,9 @@ public class Match {
          * declare results and calculate points
          */
 
-
     }
 
-    public int getChasingTeamPoint(){
+    public int getChasingTeamPoint() {
         return 0;
     }
 

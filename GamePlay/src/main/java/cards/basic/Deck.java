@@ -10,7 +10,7 @@ public class Deck {
     public Deck() {
         for (Suit s : Suit.values()) {
             for (Rank r : Rank.values()) {
-                deck.add(new Card(s,r));
+                deck.add(new Card(s, r));
             }
         }
     }
@@ -22,23 +22,22 @@ public class Deck {
 
     //shows the current deck situation
     public void showDeck() {
-        int i=0;
-        for(i=0; i < deck.size(); i++) {
+        int i = 0;
+        for (i = 0; i < deck.size(); i++) {
             System.out.println(deck.get(i).getCardString());
         }
     }
 
 
-    public Card getCard(int index)
-    {
+    public Card getCard(int index) {
         return deck.get(index);
     }
 
-    public int getDeckSize(){
+    public int getDeckSize() {
         return deck.size();
     }
 
-    public Card popTopCard(){
+    public Card popTopCard() {
         Card card = deck.get(0);
         deck.remove(0);
         return card;
