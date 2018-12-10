@@ -1,7 +1,7 @@
 package cards.basic;
 
 public enum Suit {
-    HEARTS(1,"♡","H"), DIAMONDS(2,"♢","D"), SPADES(3,"♠","S"), CLUBS(4,"♣","C");
+    HEARTS(1, "♡", "H"), DIAMONDS(2, "♢", "D"), SPADES(3, "♠", "S"), CLUBS(4, "♣", "C");
 
     private int suitValue;
     private String suitSymbol;
@@ -12,7 +12,6 @@ public enum Suit {
         this.suitSymbol = suitSymbol;
         this.suitString = suitString;
     }
-
 
     //getters
 
@@ -28,16 +27,20 @@ public enum Suit {
         return suitString;
     }
 
-    public static Suit getSuitByString(String string){
-        for (Suit s : Suit.values()){
-            if(s.suitString.equals(string.toUpperCase())) return s;
+    public static Suit getSuitByString(String string) {
+        for (Suit s : Suit.values()) {
+            if (s.suitString.equals(string.toUpperCase())) {
+                return s;
+            }
         }
         return null;
     }
 
-    public static Suit getSuitByValue(int value){
-        for (Suit s : Suit.values()){
-            if(s.suitValue == value) return s;
+    public static Suit getSuitByValue(int value) {
+        for (Suit s : Suit.values()) {
+            if (s.suitValue == value) {
+                return s;
+            }
         }
         return null;
     }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import cards.game.Player;
 
 public class TallyTable {
+
     ArrayList<Player> players;
     ArrayList<int[]> points;
     int[] totalPoints;
@@ -18,10 +19,10 @@ public class TallyTable {
     }
 
 
-    public void displayTable(){
+    public void displayTable() {
         System.out.println("The scores so far");
-        for (int i = 0; i < Math.min(points.size(),noOfLastResults); i++){
-            for (int j = 0; j < noOfPlayers; j++){
+        for (int i = 0; i < Math.min(points.size(), noOfLastResults); i++) {
+            for (int j = 0; j < noOfPlayers; j++) {
                 System.out.println(players.get(j).getName());
             }
         }

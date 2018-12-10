@@ -1,8 +1,11 @@
 package cards.game;
 
+import cards.basic.Card;
 import cards.basic.Hand;
+import cards.basic.Suit;
 
 public class Player {
+
     int id;
     String name;
     Hand hand;
@@ -30,5 +33,18 @@ public class Player {
 
     public Hand getHand() {
         return hand;
+    }
+
+    public Boolean hasSuit(Suit suit) {
+        for (Card card : hand.getMyCards()) {
+            if (card.getSuit() == suit) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void setHand(Hand hand) {
+        this.hand = hand;
     }
 }
