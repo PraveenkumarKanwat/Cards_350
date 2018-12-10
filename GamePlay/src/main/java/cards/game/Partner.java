@@ -12,7 +12,8 @@ public class Partner {
     int partnerID1, partnerID2;
     Player partner1, partner2;
 
-    public Partner() {
+    public Partner(int biddersID) {
+        this.biddersID = biddersID;
         card1 = null;
         card2 = null;
         partnerID1 = -1;

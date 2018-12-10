@@ -43,4 +43,8 @@ public class Player {
         }
         return false;
     }
+
+    public void setHand(Hand hand) {
+        this.hand = hand;
+    }
 }

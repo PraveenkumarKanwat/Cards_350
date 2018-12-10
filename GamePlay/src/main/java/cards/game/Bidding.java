@@ -20,6 +20,9 @@ public class Bidding {
         return currentBiddingValue;
     }
 
+    public int getWinnerID() {
+        return winnerID;
+    }
 
     public int doBidding(Player player) {
         if (currentBiddingValue == maxBiddingValue) {
