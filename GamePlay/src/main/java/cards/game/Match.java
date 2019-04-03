@@ -1,9 +1,13 @@
 package cards.game;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
+import cards.basic.Card;
 import cards.basic.Dealer;
 import cards.basic.Hand;
+import cards.basic.Rank;
+import cards.basic.Suit;
 
 public class Match {
 
@@ -11,6 +15,7 @@ public class Match {
     ArrayList<Player> players;
     Trump trump;
     Dealer dealer;
+    final int noOfRounds = 8;
 
     public Match(ArrayList<Player> players) {
         rounds = new ArrayList<Round>();
@@ -38,12 +43,29 @@ public class Match {
         trump.setTrump();
         Partner partner = new Partner(bidding.getHighestBidderPosition());
         partner.callPartner(players);
-        for (int i = 0; i < 6; i++) {
-            Round round = new Round();
+        int winnerIndex = 0;
+        int chaserPoints = 0;
+
+        for (int i = 0; i < noOfRounds; i++) {
+            Round round = new Round(trump);
+            for (int j = 0; j < 6; j++) {
+                Card card = players.get((winnerIndex + j) % 6).playCard();
+                System.out.println(card.getCardString());
+                round.addCardToRound(card);
+            }
+            winnerIndex = round.whoIsTheWinner();
+            chaserPoints += round.calculateRoundPoints();
             /**
              * here to write rounds to be conducted
              */
         }
+
+        if (chaserPoints >= bidding.getCurrentBiddingValue()){
+            System.out.println("Winners are chasers");
+        } else {
+            System.out.println("Winner are defenders");
+        }
+
 
     }
 

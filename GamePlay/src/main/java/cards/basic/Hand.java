@@ -26,7 +26,7 @@ public class Hand {
         }
     }
 
-    Boolean removeCard(Card card) {
+    public Boolean removeCard(Card card) {
         boolean isSuccessful = myCards.remove(card);
         calcPoints();
         return isSuccessful;
@@ -44,10 +44,12 @@ public class Hand {
         return myPoints;
     }
 
-    public void showHand() {
+    public String showHand() {
         int handSize = myCards.size();
+        String str = "";
         for (int i = 0; i < handSize; i++) {
-            System.out.println(myCards.get(i).getCardString() + "  ");
+            str = str + myCards.get(i).getCardString() + "  ";
         }
+        return str;
     }
 }
