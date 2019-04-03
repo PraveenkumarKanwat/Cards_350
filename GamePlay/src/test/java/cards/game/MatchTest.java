@@ -16,5 +16,7 @@ public class MatchTest {
         players.add(new Player(5, "Bole", new Hand()));
         players.add(new Player(6, "Appu", new Hand()));
         Match match = new Match(players);
+        match.startTheGame();
+
     }
 }

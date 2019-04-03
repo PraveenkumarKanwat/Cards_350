@@ -10,7 +10,7 @@ public class RoundTest {
 
     public static void main(String[] args) {
         Trump trump = new Trump();
-        Round round = new Round();
+        Round round = new Round(trump);
         trump.setTrump();
         trump.openTrump();
         for (int i = 0; i < 6; i++) {

@@ -13,12 +13,14 @@ public class Round {
     ArrayList<Card> roundCards;
     static int winnerIndex;
     Card soFarHighestCard;
+    Trump trump;
     Logger logger = Logger.getLogger(Round.class.getName());
 
-    public Round() {
+    public Round(Trump trump) {
         roundCards = new ArrayList<Card>();
         winnerIndex = -1;
         soFarHighestCard = null;
+        this.trump = trump;
     }
 
     public void addCardToRound(Card card) {
@@ -51,8 +53,8 @@ public class Round {
 
                 }
             } else {
-                if (Trump.isTrumpOpen()) {
-                    if (card.getSuit() == Trump.getTrump()) {
+                if (trump.isTrumpOpen()) {
+                    if (card.getSuit() == trump.getTrump()) {
                         if (card.getSuit() == soFarHighestCard.getSuit()) {
                             if (card.getRank().getRankValue() > soFarHighestCard.getRank().getRankValue()) {
                                 winnerIndex = roundCards.size();
