@@ -1,0 +1,14 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+    <servlet>
+        <servlet-name>requestHandler</servlet-name>
+        <servlet-class>cards.servlet.RequestHandler</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>requestHandler</servlet-name>
+        <url-pattern>/requestHandler</url-pattern>
+    </servlet-mapping>
+</web-app>
+

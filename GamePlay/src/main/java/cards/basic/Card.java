@@ -71,6 +71,7 @@ public class Card {
     }
 
     public static Card findCardByString(String string) {
+        string = string.trim();
         Rank cardRank = Rank.getRankBySymbol(string.substring(0, string.length() - 1));
         Suit cardSuit = Suit.getSuitByString(string.substring(string.length() - 1));
         if (cardRank != null && cardSuit != null) {

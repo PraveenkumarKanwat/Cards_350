@@ -1,0 +1,25 @@
+{
+  "player_id": 2,
+  "player_name": "praveen",
+  "cards_in_hand": {
+    "number_of_cards": 4,
+    "cards": [
+      {
+        "card_by_id": 23,
+        "card_by_string": "10D"
+      },
+      {
+        "card_by_id": 23,
+        "card_by_string": "JD"
+      },
+      {
+        "card_by_id": 23,
+        "card_by_string": "AD"
+      },
+      {
+        "card_by_id": 23,
+        "card_by_string": "3D"
+      }
+    ]
+  }
+}
