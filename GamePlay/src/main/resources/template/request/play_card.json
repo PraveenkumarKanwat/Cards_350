@@ -1,0 +1,8 @@
+{
+  "player_id": 2,
+  "player_name": "praveen",
+  "card_in_hand" : {
+    "card_by_id": 23,
+    "card_by_string": "10D"
+  }
+}

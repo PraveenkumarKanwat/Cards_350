@@ -1,5 +1,10 @@
 package cards.basic;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Card {
 
     private Suit suit;
@@ -12,36 +17,13 @@ public class Card {
         points = allocatePoints();
     }
 
-    //getters
-    public Suit getSuit() {
-        return suit;
-    }
-
-    public Rank getRank() {
-        return rank;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    //setters
-    public void setSuit(Suit suit) {
-        this.suit = suit;
-    }
-
-    public void setRank(Rank rank) {
-        this.rank = rank;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
     public String getCardString() {
-        return (this.getRank().getRankSymbol() + this.getSuit().getSymbol());
+        return this.getRank().getRankSymbol() + this.getSuit().getSymbol();
     }
 
+    public String getCardFullString(){
+        return this.getRank().name() + " " + this.getSuit().name();
+    }
     public boolean isEqualTo(Card card) {
         if (this.suit == card.suit && this.rank == card.rank) {
             return true;
