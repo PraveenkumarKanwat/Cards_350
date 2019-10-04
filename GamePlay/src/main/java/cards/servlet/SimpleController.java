@@ -20,7 +20,7 @@ public class SimpleController {
 
   @RequestMapping(value = "/api",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
   public String test(){
-    return "{\"message\" : \"Hello World!!!\"}C";
+    return "{\"message\" : \"Hello World!!!\"}";
   }
 
   @RequestMapping(value = "/card", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -40,9 +40,10 @@ public class SimpleController {
   }
 
   @RequestMapping(value = "/play_this_card", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-  public void played_this_card(@RequestBody PlayThisCard cardPlayed){
-    CardJson cj = cardPlayed.getCardsInHand();
+  public String played_this_card(@RequestBody PlayThisCard cardPlayed){
+    CardJson cj = cardPlayed.getCardInHand();
     Card c = Card.findCardByString(cj.getCardByString());
     System.out.println(c.getCardFullString());
+    return  c.getCardFullString();
   }
 }

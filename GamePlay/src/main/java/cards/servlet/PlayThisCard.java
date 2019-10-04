@@ -15,6 +15,6 @@ public class PlayThisCard {
   @JsonProperty("player_name")
   private String playerName;
 
-  @JsonProperty("cards_in_hand")
-  private CardJson cardsInHand;
+  @JsonProperty("card_in_hand")
+  private CardJson cardInHand;
 }
